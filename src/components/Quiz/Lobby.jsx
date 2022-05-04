@@ -1,13 +1,15 @@
 import React from "react";
+import "./Quiz.css";
 
-const Lobby = ({ stage, setStage }) => {
+const Lobby = ({ stage, setStage, generateQuiz }) => {
 	const startQuiz = (evt) => {
 		evt.preventDefault();
 		setStage(1);
+		generateQuiz();
 	};
 
 	return (
-		<div>
+		<div className="center-items">
 			<p>Dropdown with regions</p>
 			<p>Rules and how to play / earn points</p>
 			<button

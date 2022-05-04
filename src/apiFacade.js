@@ -32,6 +32,31 @@ function apiFacade() {
         return fetch(URL + `/api/info/${role}`, options).then(handleHttpErrors);
     }
 
+    const getQuiz = (setQuiz, continent, username) => {
+        const options = makeOptions("GET", true);
+        return fetch(URL + `/api/quiz/generate/${continent}/${username}`)
+            .then(handleHttpErrors)
+            .then(res => {
+                setQuiz(res)
+            })
+    }
+
+    const getResult = (setPoints, totalPoints, setTotalPoints, correctId, answer, time, setShowResult, setAnswerCorrect) => {
+        const options = makeOptions("GET", true);
+        return fetch(URL + `/api/quiz/result/${correctId}/${answer}/${time}`)
+            .then(handleHttpErrors)
+            .then(res => {
+                setPoints(res)
+                setTotalPoints(totalPoints + res)
+                setShowResult(true)
+                if (res === 0) {
+                    setAnswerCorrect(false)
+                } else {
+                    setAnswerCorrect(true)
+                }
+            })
+    }
+
     const setToken = (token) => {
         localStorage.setItem('jwtToken', token)
     }
@@ -73,7 +98,9 @@ function apiFacade() {
         login,
         signup,
         logout,
-        fetchUserData
+        fetchUserData,
+        getQuiz,
+        getResult
     }
 }
 

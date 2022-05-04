@@ -37,7 +37,7 @@ function App() {
 
 					<Route path="/admin" element={<Admin />} />
 					<Route path="/user" element={<User />} />
-					<Route path="/quiz" element={<Quiz />} />
+					<Route path="/quiz" element={<Quiz username={username} />} />
 				</Routes>
 			</Router>
 		</div>

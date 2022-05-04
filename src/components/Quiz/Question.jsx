@@ -1,17 +1,23 @@
 import React from "react";
+import "./Question.css";
+import "./Quiz.css";
+import facade from "../../apiFacade";
 
-const Question = ({ stage, question, setStage }) => {
+const Question = ({ stage, question, setPoints, totalPoints, setTotalPoints, setShowResult, setAnswerCorrect }) => {
 	const clickAnswer = (evt, answerChoice) => {
 		evt.preventDefault();
 		console.log(answerChoice);
-		setStage(stage + 1);
+		// setStage(stage + 1);
+		facade.getResult(setPoints, totalPoints, setTotalPoints, question.correctCountryId, answerChoice, 12, setShowResult, setAnswerCorrect);
 	};
 
 	return (
-		<div>
+		<div className="question-container center-items">
 			<h2>Question {stage}</h2>
 			<h4>Which country has this flag?</h4>
-			<div dangerouslySetInnerHTML={{ __html: question.svg }} />
+			<div className="question-svg-container center-items">
+				<div dangerouslySetInnerHTML={{ __html: question.svg }} className="question-svg" />
+			</div>
 			<button
 				className="answer-btn"
 				onClick={(e) => {

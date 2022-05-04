@@ -1,0 +1,34 @@
+.question-container {
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	height: 300px;
+	max-height: 300px;
+}
+
+.question-svg-container {
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	height: 250px;
+	max-height: 250px;
+}
+
+.question-svg {
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	height: 200px;
+	max-height: 200px;
+
+	transform-origin: top;
+	transform: scale(0.2);
+}
+
+/* svg {
+	max-width: 300px;
+	max-height: 300px;
+} */
