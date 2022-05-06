@@ -1,7 +1,7 @@
 import React from "react";
 import "./Quiz.css";
 
-const Lobby = ({ stage, setStage, generateQuiz }) => {
+const Lobby = ({ setStage, generateQuiz }) => {
 	const startQuiz = (evt) => {
 		evt.preventDefault();
 		setStage(1);
@@ -47,7 +47,7 @@ const Lobby = ({ stage, setStage, generateQuiz }) => {
 				World
 			</button>
 		</div>
-				// <p className="how-to-play">Rules and how to play / earn points</p>
+		// <p className="how-to-play">Rules and how to play / earn points</p>
 	);
 };
 

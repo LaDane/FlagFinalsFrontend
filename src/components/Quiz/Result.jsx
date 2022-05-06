@@ -1,13 +1,7 @@
 import React from "react";
 import "./Quiz.css";
 
-const Result = ({ stage, setStage, points, totalPoints, setShowResult, answerCorrect }) => {
-	const continueBtn = (evt) => {
-		evt.preventDefault();
-		setShowResult(false);
-		setStage(stage + 1);
-	};
-
+const Result = ({ stage, points, totalPoints, answerCorrect, continueBtn }) => {
 	return (
 		<div className="center-items">
 			<h2>Result of question {stage}</h2>
