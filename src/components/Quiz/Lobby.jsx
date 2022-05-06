@@ -10,17 +10,44 @@ const Lobby = ({ stage, setStage, generateQuiz }) => {
 
 	return (
 		<div className="center-items">
-			<p>Dropdown with regions</p>
-			<p>Rules and how to play / earn points</p>
+			<h2 className="game-mode">Pick a game mode!</h2>
 			<button
 				className="lobby-start-btn"
 				onClick={(e) => {
 					startQuiz(e);
 				}}
 			>
-				Start Quiz
+				Europe
+			</button>
+
+			<button
+				className="lobby-start-btn"
+				onClick={(e) => {
+					startQuiz(e);
+				}}
+			>
+				Asia
+			</button>
+
+			<button
+				className="lobby-start-btn"
+				onClick={(e) => {
+					startQuiz(e);
+				}}
+			>
+				America
+			</button>
+
+			<button
+				className="lobby-start-btn"
+				onClick={(e) => {
+					startQuiz(e);
+				}}
+			>
+				World
 			</button>
 		</div>
+				// <p className="how-to-play">Rules and how to play / earn points</p>
 	);
 };
 

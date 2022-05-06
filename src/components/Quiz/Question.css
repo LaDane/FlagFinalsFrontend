@@ -1,34 +1,82 @@
 .question-container {
 	position: relative;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
+	/* text-align: center; */
 	height: 300px;
 	max-height: 300px;
+
 }
 
 .question-svg-container {
 	position: relative;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
+	/* text-align: center; */
 	height: 250px;
 	max-height: 250px;
+	
+	
 }
 
 .question-svg {
 	position: relative;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
 	height: 200px;
 	max-height: 200px;
-
 	transform-origin: top;
 	transform: scale(0.2);
+	
 }
 
-/* svg {
-	max-width: 300px;
-	max-height: 300px;
-} */
+.buttons {
+	margin-top: 50px;
+}
+
+
+.answer-btn {
+	text-transform: uppercase;
+	outline: 0;
+	background-color: #9EDB9B;
+	/* background-image: linear-gradient(45deg,#dac350,#0e0553); */
+	width: 300px;
+	border: 3;
+	border-color: #FFFFFF;
+	padding: 20px;
+	padding-top: 20px;
+	color: #FFFFFF;
+	font-size: 14px;
+	cursor: pointer;
+	display: block;
+	margin:0 auto;
+	border-radius: 6px;
+	font-style: italic;
+
+}
+
+.answer-btn:hover {
+	transition: all 0.2s ease-in-out;
+	background: #F2EACC;
+	color: #010606;
+}
+
+.circle {
+	width: 50px;
+	height: 50px;
+   
+	/* (B) 50% RADIUS = CIRCLE */
+	border-radius: 50%;
+   
+	/* (C) BACKGROUND COLOR */
+	background: #b4b4d4;
+	margin-left: 1200px;
+}
+
+.seconds {
+	color: white;
+}
+
+.title {
+	margin-bottom: 20px;
+	color: #9EDB9B;
+}
+
+.question-number {
+	margin-bottom: 20px;
+	color: #9EDB9B;
+}

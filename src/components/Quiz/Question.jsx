@@ -2,6 +2,7 @@ import React from "react";
 import "./Question.css";
 import "./Quiz.css";
 import facade from "../../apiFacade";
+import Navsidebar from "../Navbar/Navsidebar";
 
 const Question = ({ stage, question, setPoints, totalPoints, setTotalPoints, setShowResult, setAnswerCorrect }) => {
 	const clickAnswer = (evt, answerChoice) => {
@@ -13,11 +14,16 @@ const Question = ({ stage, question, setPoints, totalPoints, setTotalPoints, set
 
 	return (
 		<div className="question-container center-items">
-			<h2>Question {stage}</h2>
-			<h4>Which country has this flag?</h4>
+			<Navsidebar/>
+			<div className="circle">
+				<p className="seconds">20</p>
+			</div>
+			<h1 className="title">flag finals</h1>
+			<h4 className="question-number">{stage}. Which country has this flag?</h4>
 			<div className="question-svg-container center-items">
 				<div dangerouslySetInnerHTML={{ __html: question.svg }} className="question-svg" />
 			</div>
+			<div className="buttons">
 			<button
 				className="answer-btn"
 				onClick={(e) => {
@@ -50,6 +56,7 @@ const Question = ({ stage, question, setPoints, totalPoints, setTotalPoints, set
 			>
 				{question.answer4}
 			</button>
+			</div>
 		</div>
 	);
 };

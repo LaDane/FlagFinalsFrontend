@@ -6,6 +6,7 @@ import "./styling/App.css";
 import facade from "./apiFacade";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar/Navbar";
+import Navsidebar from "./components/Navbar/Navsidebar";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 
