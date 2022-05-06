@@ -30,7 +30,8 @@ const Quiz = ({ username, loggedIn }) => {
 		continentName: "",
 		username: "",
 	});
-	const questionAmount = 3;
+
+	const questionAmount = 20;
 
 	// useEffect(() => {
 	// 	console.log("useEffect");
