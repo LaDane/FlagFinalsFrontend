@@ -2,27 +2,12 @@ import React, { useState } from "react";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import "./Timer.css";
 
-function Timer({  answerBtn }) {
-  const [key, setKey] = useState(0);
-  const [start, setStart] = useState(true);
-  const [time, setTime] = useState(0);
-
-  const restartTime = () => {
-    setKey((prevKey) => prevKey + 1);
-  };
-  const startTimer = () => {
-    setStart(!start);
-  };
-
-  const printTime = () => {
-    console.log(time);
-  };
+function Timer({  answerBtn, setTime }) {
   return (
    
       <div className="timer">
         <CountdownCircleTimer
-          key={key}
-          isPlaying={start}
+        isPlaying
           duration={10}
           strokeWidth={20}
           strokeLinecap="square"
@@ -30,7 +15,7 @@ function Timer({  answerBtn }) {
           colors={["#004777", "#F7B801", "#A30000", "#A30000"]}
           colorsTime={[7, 5, 2, 0]}
           onUpdate={(remainingTime) => setTime(remainingTime)}
-          onComplete={(e) => answerBtn(null, "timeout")}
+          onComplete={(e) => answerBtn(null, "timeout", 0)}
         >
           {({ remainingTime }) => remainingTime}
         </CountdownCircleTimer>

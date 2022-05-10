@@ -1,7 +1,7 @@
 import "./Quiz.css";
 import "./Question.css";
 
-function QuestionContainer({ stage, question, answerBtn }) {
+function QuestionContainer({ stage, question, answerBtn, time }) {
   return (
     <div>
       <h2 className="question-number">{stage}. Which country has this flag?</h2>
@@ -16,7 +16,7 @@ function QuestionContainer({ stage, question, answerBtn }) {
         <button
           className="answer-btn"
           onClick={(e) => {
-            answerBtn(e, question.answer1);
+            answerBtn(e, question.answer1, time);
           }}
         >
           {question.answer1}
@@ -24,7 +24,7 @@ function QuestionContainer({ stage, question, answerBtn }) {
         <button
           className="answer-btn"
           onClick={(e) => {
-            answerBtn(e, question.answer2);
+            answerBtn(e, question.answer2, time);
           }}
         >
           {question.answer2}
@@ -32,7 +32,7 @@ function QuestionContainer({ stage, question, answerBtn }) {
         <button
           className="answer-btn"
           onClick={(e) => {
-            answerBtn(e, question.answer3);
+            answerBtn(e, question.answer3, time);
           }}
         >
           {question.answer3}
@@ -40,7 +40,7 @@ function QuestionContainer({ stage, question, answerBtn }) {
         <button
           className="answer-btn"
           onClick={(e) => {
-            answerBtn(e, question.answer4);
+            answerBtn(e, question.answer4, time);
           }}
         >
           {question.answer4}
