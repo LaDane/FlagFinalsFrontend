@@ -1,6 +1,6 @@
 .homescreen {
 	height: 100vh;
-	background: #006983;
+	background: #F2EACC;
 }
 
 .homescreen-logo {
@@ -17,12 +17,16 @@
 }
 
 .homescreen-title {
+	text-transform: uppercase;
+	font-style: italic;
 	margin-left: 300px;
 	margin-right: 300px;
 	padding: 20px;
-	border-radius: 30px;
-	box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.8);
-	background: white;
+	/* border-radius: 30px; */
+	/* box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.8); */
+	/* background: white; */
+	font-size: 50px;
+	color: #9EDB9B;
 	justify-content: center;
 	align-items: center;
 	text-align: center;

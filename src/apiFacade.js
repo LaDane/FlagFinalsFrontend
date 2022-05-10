@@ -1,5 +1,6 @@
-const URL = "http://localhost:8080/flagfinals_war_exploded";
-             
+// const URL = "http://localhost:8080/flagfinals_war_exploded";
+const URL = "http://localhost:8080/FlagFinalsBackend_war_exploded";
+
 
 function handleHttpErrors(res) {
     if (!res.ok) {
@@ -35,16 +36,16 @@ function apiFacade() {
 
     const getQuiz = (setQuiz, continent, username) => {
         const options = makeOptions("GET", true);
-        return fetch(URL + `/api/quiz/generate/${continent}/${username}`)
+        return fetch(URL + `/api/quiz/generate/${continent}/${username}`, options)
             .then(handleHttpErrors)
             .then(res => {
                 setQuiz(res)
             })
     }
 
-    const getResult = (setPoints, totalPoints, setTotalPoints, correctId, answer, time, setShowResult, setAnswerCorrect) => {
+    const getResult = (setPoints, totalPoints, setTotalPoints, correctId, answer, time, setShowResult, setAnswerCorrect, updateQuestion) => {
         const options = makeOptions("GET", true);
-        return fetch(URL + `/api/quiz/result/${correctId}/${answer}/${time}`)
+        return fetch(URL + `/api/quiz/result/${correctId}/${answer}/${time}`, options)
             .then(handleHttpErrors)
             .then(res => {
                 setPoints(res)
@@ -54,7 +55,24 @@ function apiFacade() {
                     setAnswerCorrect(false)
                 } else {
                     setAnswerCorrect(true)
+                    updateQuestion(res)
                 }
+            })
+    }
+
+    const endQuiz = (quiz, setQuiz) => {
+        const options = makeOptions("POST", true, {
+            totalPoints: quiz.totalPoints,
+            totalCorrect: quiz.totalCorrect,
+            totalIncorrect: quiz.totalIncorrect,
+            questions: quiz.questions,
+            continentName: quiz.continentName,
+            username: quiz.username
+        });
+        return fetch(URL + `/api/quiz/create`, options)
+            .then(handleHttpErrors)
+            .then(res => {
+                setQuiz(res)
             })
     }
 
@@ -101,7 +119,8 @@ function apiFacade() {
         logout,
         fetchUserData,
         getQuiz,
-        getResult
+        getResult,
+        endQuiz
     }
 }
 

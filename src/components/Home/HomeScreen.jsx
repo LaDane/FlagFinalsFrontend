@@ -5,10 +5,10 @@ const HomeScreen = () => {
 	return (
 		<div className="homescreen">
 			<div className="homescreen-logo">
-				<img className="homescreen-img" src={require("../../images/startcode-logo.png")} alt="Logo" />
+				{/* <img className="homescreen-img" src={require("../../images/startcode-logo.png")} alt="Logo" /> */}
 			</div>
 			<div className="homescreen-title">
-				<h1>Datamatiker 3 Semester Startcode</h1>
+				<h1>flag finals!</h1>
 			</div>
 		</div>
 	);

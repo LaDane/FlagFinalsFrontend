@@ -1,11 +1,11 @@
-import { FaBars } from "react-icons/fa";
+// import { FaBars } from "react-icons/fa";
 import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Nav = styled.nav`
 	background: #9ab0e2;
 	height: 80px;
-	background: #2F8DFF;
+	background: #2f8dff;
 	display: flex;
 	justify-content: space-between;
 	padding: 0.5rem calc((100vw - 1000px) / 2);
@@ -14,14 +14,21 @@ export const Nav = styled.nav`
 	/* Third Nav */
 	/* justify-content: flex-start; */
 	font-style: italic;
+<<<<<<< Updated upstream
+=======
+	border: 2px solid black;
+	border-radius: 5px;	 
 
+	 
+
+>>>>>>> Stashed changes
 `;
 
 export const NavLink = styled(Link)`
 	color: white;
 	display: flex;
 	border-radius: 4px;
-	background: #2F8DFF;
+	background: #2f8dff;
 	text-transform: uppercase;
 	align-items: center;
 	text-decoration: none;
@@ -30,16 +37,14 @@ export const NavLink = styled(Link)`
 	padding: 10px 22px;
 
 	&.active {
-		color: #F2EACC;
+		color: #f2eacc;
 	}
 
 	&:hover {
 		transition: all 0.2s ease-in-out;
-		background: #F2EACC;
+		background: #f2eacc;
 		color: #010606;
 	}
-
-
 `;
 
 // export const Bars = styled(FaBars)`
@@ -72,8 +77,6 @@ export const NavMenu = styled.div`
 	// @media screen and (max-width: 768px) {
 	// 	display: none;
 	// }
-
-
 `;
 
 export const NavBtn = styled.nav`
@@ -92,7 +95,7 @@ export const NavBtn = styled.nav`
 
 export const NavBtnLink = styled(Link)`
 	border-radius: 4px;
-	background: #2F8DFF;
+	background: #2f8dff;
 	padding: 10px 22px;
 	color: white;
 	text-transform: uppercase;
@@ -107,9 +110,7 @@ export const NavBtnLink = styled(Link)`
 
 	&:hover {
 		transition: all 0.2s ease-in-out;
-		background: #F2EACC;
+		background: #f2eacc;
 		color: #010606;
 	}
-
-	
 `;
