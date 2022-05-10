@@ -41,9 +41,11 @@ const Quiz = ({ username, loggedIn }) => {
 		facade.getQuiz(setQuiz, "Europe", username);
 	};
 
-	const answerBtn = (evt, answerChoice) => {
+	const answerBtn = (evt, answerChoice, time) => {
+		if(evt!=null){
 		evt.preventDefault();
-		facade.getResult(setPoints, totalPoints, setTotalPoints, quiz.questions[stage - 1].correctCountryId, answerChoice, 12, setShowResult, setAnswerCorrect, updateQuestion);
+		}
+		facade.getResult(setPoints, totalPoints, setTotalPoints, quiz.questions[stage - 1].correctCountryId, answerChoice, time, setShowResult, setAnswerCorrect, updateQuestion);
 	};
 
 	const continueBtn = (evt) => {
