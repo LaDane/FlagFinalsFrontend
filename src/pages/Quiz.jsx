@@ -42,7 +42,9 @@ const Quiz = ({ username, loggedIn }) => {
 	};
 
 	const answerBtn = (evt, answerChoice) => {
+		if(evt!=null){
 		evt.preventDefault();
+		}
 		facade.getResult(setPoints, totalPoints, setTotalPoints, quiz.questions[stage - 1].correctCountryId, answerChoice, 12, setShowResult, setAnswerCorrect, updateQuestion);
 	};
 
