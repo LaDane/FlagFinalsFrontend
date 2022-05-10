@@ -9,6 +9,7 @@
 >     npm install react-icons --save
 >     npm install jwt-decode
 >     npm install --save styled-components
+>     npm i react-countdown-circle-timer
 > ```
 
 ## Deploying to a subdirectory with Ubuntu & NGINX
@@ -131,4 +132,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
 # FlagFinalsFrontend

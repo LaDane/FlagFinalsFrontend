@@ -4,7 +4,7 @@ import { useState } from "react";
 import facade from "../apiFacade";
 
 const Signup = () => {
-	const init = { username: "", password: "" };
+	const init = { username: "", password: "", countryName: "" };
 	const [signupCredentials, setSignupCredentials] = useState(init);
 	const [responseText, setResponseText] = useState("");
 
@@ -13,11 +13,8 @@ const Signup = () => {
 	};
 
 	const performSignup = (evt) => {
-		signup(signupCredentials.username, signupCredentials.password);
-	};
-
-	const signup = (user, pass) => {
-		facade.signup(user, pass, setResponseText);
+		console.log(signupCredentials);
+		facade.signup(signupCredentials.username, signupCredentials.password, signupCredentials.countryName, setResponseText);
 	};
 
 	return (

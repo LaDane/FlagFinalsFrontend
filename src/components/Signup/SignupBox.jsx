@@ -1,10 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaEnvelope, FaLock } from "react-icons/fa";
 import "./SignupBox.css";
+import facade from "../../apiFacade";
 
 const SignupBox = ({ onChange, performSignup, responseText }) => {
 	const [usernameInput, setUsernameInput] = useState("");
 	const [passwordInput, setPasswordInput] = useState("");
+	const [countryInput, setCountryInput] = useState(0);
+	const [countries, setCountries] = useState([]);
+
+	useEffect(() => {
+		facade.getAllCountries(setCountries, dynamicSort);
+	}, []);
 
 	const onClick = (evt) => {
 		evt.preventDefault();
@@ -12,6 +19,18 @@ const SignupBox = ({ onChange, performSignup, responseText }) => {
 		setUsernameInput("");
 		setPasswordInput("");
 	};
+
+	function dynamicSort(property) {
+		var sortOrder = 1;
+		if (property[0] === "-") {
+			sortOrder = -1;
+			property = property.substr(1);
+		}
+		return function (a, b) {
+			var result = a[property] < b[property] ? -1 : a[property] > b[property] ? 1 : 0;
+			return result * sortOrder;
+		};
+	}
 
 	return (
 		<div className="signup-box">
@@ -49,6 +68,26 @@ const SignupBox = ({ onChange, performSignup, responseText }) => {
 								<FaLock />
 							</i>
 						</div>
+					</div>
+					<div className="signup-ddown">
+						<select
+							className="signup-ddown-input"
+							name="countryName"
+							id="countryName"
+							defaultValue={"DEFAULT"}
+							onChange={(e) => {
+								setCountryInput(e.target.value);
+							}}
+						>
+							<option value="DEFAULT" disabled hidden>
+								Country of residence
+							</option>
+							{countries.map((c) => (
+								<option key={c.id} value={c.countryName}>
+									{c.countryName}
+								</option>
+							))}
+						</select>
 					</div>
 					<button className="signup-btn" onClick={onClick}>
 						Signup

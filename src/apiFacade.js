@@ -19,14 +19,13 @@ function apiFacade() {
             .then(res => { setToken(res.token) })
     }
 
-    const signup = (user, password, setResponseText) => {
-        const options = makeOptions("POST", false, { username: user, password: password });
+    const signup = (user, password, countryName, setResponseText) => {
+        const options = makeOptions("POST", false, { username: user, password: password, countryName: countryName });
         return fetch(URL + "/api/signup", options)
             .then(handleHttpErrors)
             .then(res => {
                 setResponseText(res.msg);
-            }
-            )
+            })
     }
 
     const fetchUserData = (role) => {
@@ -76,6 +75,16 @@ function apiFacade() {
             })
     }
 
+    const getAllCountries = (setCountries, dynamicSort) => {
+        const options = makeOptions("GET", false);
+        return fetch(URL + `/api/country/all`, options)
+            .then(handleHttpErrors)
+            .then(res => {
+                const sortedCountries = res.sort(dynamicSort("countryName"))
+                setCountries(sortedCountries)
+            })
+    }
+
     const setToken = (token) => {
         localStorage.setItem('jwtToken', token)
     }
@@ -120,7 +129,8 @@ function apiFacade() {
         fetchUserData,
         getQuiz,
         getResult,
-        endQuiz
+        endQuiz,
+        getAllCountries
     }
 }
 
