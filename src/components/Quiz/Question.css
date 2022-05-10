@@ -3,7 +3,7 @@
 	display: flex;
 	
 	background-color: #F2EACC;
-	
+
 	/* text-align: center; 
 	height: 300px;
 	max-height: 300px;
@@ -14,23 +14,7 @@
 
 }
 
-.question-svg-container {
-	position: relative;
-	/* text-align: center; */
-	height: 250px;
-	max-height: 250px;
-	
-	
-}
 
-.question-svg {
-	position: relative;
-	height: 200px;
-	max-height: 200px;
-	transform-origin: top;
-	transform: scale(0.2);
-	
-}
 
 .buttons {
 	margin-top: 50px;
