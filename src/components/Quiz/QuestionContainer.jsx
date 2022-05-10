@@ -12,7 +12,7 @@ function QuestionContainer({ stage, question, answerBtn, time }) {
           width="300"
         />
       </div>
-      <div className="buttons">
+      <div>
         <button
           className="answer-btn"
           onClick={(e) => {

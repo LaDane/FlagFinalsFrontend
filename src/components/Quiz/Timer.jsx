@@ -7,7 +7,7 @@ function Timer({  answerBtn, setTime }) {
    
       <div className="timer">
         <CountdownCircleTimer
-        isPlaying
+        isPlaying={true}
           duration={10}
           strokeWidth={20}
           strokeLinecap="square"

@@ -5,7 +5,7 @@
 .w3-sidebar {
 	max-width: 12rem !important;
 	width: 100%;
-	min-height: 100vh;
+	min-height: calc(100vh - 80px);
 	background-color: #2F8DFF;
 	position: absolute;
 	top: 0;
