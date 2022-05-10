@@ -1,13 +1,12 @@
 import React from "react";
-import "./Quiz.css";
+import "./result.css"
 
 const Result = ({ stage, points, totalPoints, answerCorrect, continueBtn }) => {
 	return (
-		<div className="center-items">
-			<h2>Result of question {stage}</h2>
-			{answerCorrect ? <h4>Correct!</h4> : <h4>Wrong answer!</h4>}
-			<h4>You gained {points} points</h4>
-			<h4>You now have a total of {totalPoints} points</h4>
+		<div className="result center-items">
+			{answerCorrect ? <h1>Correct!</h1> : <h1>Wrong answer!</h1>}
+			<h3 className="you-gained">You gained {points} points</h3>
+			<h3 className="total-points">Total score: {totalPoints}</h3>
 
 			<button
 				className="answer-btn"

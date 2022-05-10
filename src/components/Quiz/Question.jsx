@@ -10,8 +10,7 @@ const Question = ({ stage, question, answerBtn }) => {
 			<div className="circle">
 				<p className="seconds">20</p>
 			</div>
-			<h1 className="title">flag finals</h1>
-			<h4 className="question-number">{stage}. Which country has this flag?</h4>
+			<h2 className="question-number">{stage}. Which country has this flag?</h2>
 			<div className="question-svg-container center-items">
 				<div dangerouslySetInnerHTML={{ __html: question.svg }} className="question-svg" />
 			</div>

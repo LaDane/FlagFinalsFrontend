@@ -4,7 +4,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: #006983;
+	background: #F2EACC;
 }
 
 /* ::selection {
@@ -22,6 +22,9 @@
 }
 
 .wrapper header {
+	font-style: italic;
+	text-transform: uppercase;
+	color: #9EDB9B;
 	font-size: 35px;
 	font-weight: 600;
 }
@@ -79,22 +82,27 @@ form input {
 }
 
 .signup-btn {
-	height: 50px;
-	width: 200px;
-	margin-top: 30px;
-	color: #fff;
-	/* padding: 0; */
-	/* border: none; */
-	background: #006983;
+	text-transform: uppercase;
+	outline: 0;
+	background-color: #2F8DFF;
+	/* background-image: linear-gradient(45deg,#dac350,#0e0553); */
+	width: 322px;
+	border: 3;
+	border-color: #FFFFFF;
+	padding: 20px;
+	padding-top: 20px;
+	color: #FFFFFF;
+	font-size: 14px;
 	cursor: pointer;
-	/* border-bottom: 2px solid rgba(0, 0, 0, 0.1); */
-	border-radius: 15px;
-	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
-	transition: all 0.3s ease;
+	display: block;
+	margin:0 auto;
+	border-radius: 6px;
+	font-style: italic;
 }
 
 .signup-btn:hover {
-	background: #0093b8;
+	transition: all 0.2s ease-in-out;
+	background: #9EDB9B;
 }
 
 .status-text {
