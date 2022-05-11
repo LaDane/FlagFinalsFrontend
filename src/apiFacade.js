@@ -1,5 +1,5 @@
-// const URL = "http://localhost:8080/flagfinals_war_exploded";
-const URL = "http://localhost:8080/FlagFinalsBackend_war_exploded";
+const URL = "http://localhost:8080/flagfinals_war_exploded";
+// const URL = "http://localhost:8080/FlagFinalsBackend_war_exploded";
 
 function handleHttpErrors(res) {
   if (!res.ok) {

@@ -1,3 +1,11 @@
+.correct {
+	color: green;
+}
+
+.wrong {
+	color: rgb(239, 79, 79);
+}
+
 .result {
 	text-transform: uppercase;
 	font-style: italic;
