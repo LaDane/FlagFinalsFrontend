@@ -2,10 +2,10 @@ import React from "react";
 import "./Quiz.css";
 
 const Lobby = ({ setStage, generateQuiz }) => {
-	const startQuiz = (evt) => {
+	const startQuiz = (evt, continent) => {
 		evt.preventDefault();
 		setStage(1);
-		generateQuiz();
+		generateQuiz(continent);
 	};
 
 	return (
@@ -15,7 +15,7 @@ const Lobby = ({ setStage, generateQuiz }) => {
 				<button
 					className="lobby-start-btn"
 					onClick={(e) => {
-						startQuiz(e);
+						startQuiz(e, "Europe");
 					}}
 				>
 					Europe
@@ -24,7 +24,7 @@ const Lobby = ({ setStage, generateQuiz }) => {
 				<button
 					className="lobby-start-btn"
 					onClick={(e) => {
-						startQuiz(e);
+						startQuiz(e, "Asia");
 					}}
 				>
 					Asia
@@ -33,16 +33,25 @@ const Lobby = ({ setStage, generateQuiz }) => {
 				<button
 					className="lobby-start-btn"
 					onClick={(e) => {
-						startQuiz(e);
+						startQuiz(e, "North America");
 					}}
 				>
-					America
+					North America
 				</button>
 
 				<button
 					className="lobby-start-btn"
 					onClick={(e) => {
-						startQuiz(e);
+						startQuiz(e, "Africa");
+					}}
+				>
+					Africa
+				</button>
+
+				<button
+					className="lobby-start-btn"
+					onClick={(e) => {
+						startQuiz(e, "World");
 					}}
 				>
 					World

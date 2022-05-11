@@ -37,8 +37,8 @@ const Quiz = ({ username, loggedIn }) => {
 	// 	console.log("useEffect");
 	// }, []);
 
-	const generateQuiz = () => {
-		facade.getQuiz(setQuiz, "Europe", username);
+	const generateQuiz = (continent) => {
+		facade.getQuiz(setQuiz, continent , username);
 	};
 
 	const answerBtn = (evt, answerChoice, time) => {
