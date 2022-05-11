@@ -14,12 +14,12 @@ const End = ({ quiz }) => {
 					return (
 						<div className="end">
 							<h1>quiz completed</h1>
-							<p>score:  <p className="final-result">{quiz.totalPoints}</p></p>
-							<p>correct answers: <p className="final-result">{quiz.totalCorrect}</p></p>
-							<p>wrong answers:  <p className="final-result">{quiz.totalIncorrect}</p></p>
-							{/* <p>{quiz.questions.size}</p> */}
-							{/* <p>{quiz.continentName}</p> */}
-							{/* <p>{quiz.username}</p> */}
+							<p>score:</p>
+							<p className="final-result">{quiz.totalPoints}</p>
+							<p>correct answers:</p>
+							<p className="final-result">{quiz.totalCorrect}</p>
+							<p>wrong answers:</p>
+							<p className="final-result">{quiz.totalIncorrect}</p>
 						</div>
 					);
 				} else {
