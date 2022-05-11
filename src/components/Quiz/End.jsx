@@ -1,4 +1,5 @@
 import React from "react";
+import "./End.css"
 
 const End = ({ quiz }) => {
 	// useEffect(() => {
@@ -11,19 +12,19 @@ const End = ({ quiz }) => {
 			{(() => {
 				if (quiz.totalPoints !== 0) {
 					return (
-						<div>
-							<h2>End of quiz</h2>
-							<p>{quiz.totalPoints}</p>
-							<p>{quiz.totalCorrect}</p>
-							<p>{quiz.totalIncorrect}</p>
-							<p>{quiz.questions.size}</p>
-							<p>{quiz.continentName}</p>
-							<p>{quiz.username}</p>
+						<div className="end">
+							<h1>quiz completed</h1>
+							<p>score:  <p className="final-result">{quiz.totalPoints}</p></p>
+							<p>correct answers: <p className="final-result">{quiz.totalCorrect}</p></p>
+							<p>wrong answers:  <p className="final-result">{quiz.totalIncorrect}</p></p>
+							{/* <p>{quiz.questions.size}</p> */}
+							{/* <p>{quiz.continentName}</p> */}
+							{/* <p>{quiz.username}</p> */}
 						</div>
 					);
 				} else {
 					return (
-						<div>
+						<div className="end">
 							<h2>Calculating...</h2>
 						</div>
 					);

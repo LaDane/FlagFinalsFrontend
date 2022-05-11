@@ -14,14 +14,10 @@ export const Nav = styled.nav`
 	/* Third Nav */
 	/* justify-content: flex-start; */
 	font-style: italic;
-<<<<<<< Updated upstream
-=======
-	border: 2px solid black;
 	border-radius: 5px;	 
 
 	 
 
->>>>>>> Stashed changes
 `;
 
 export const NavLink = styled(Link)`

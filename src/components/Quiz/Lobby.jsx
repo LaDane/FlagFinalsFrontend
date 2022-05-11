@@ -49,12 +49,7 @@ const Lobby = ({ setStage, generateQuiz }) => {
 				</button>
 			</div>
 		</div>
-<<<<<<< Updated upstream
 		// <p className="how-to-play">Rules and how to play / earn points</p>
-=======
-		
-				// <p className="how-to-play">Rules and how to play / earn points</p>
->>>>>>> Stashed changes
 	);
 };
 
