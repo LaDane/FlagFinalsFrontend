@@ -33,9 +33,6 @@ const Quiz = ({ username, loggedIn }) => {
 
 	const questionAmount = 20;
 
-	// useEffect(() => {
-	// 	console.log("useEffect");
-	// }, []);
 
 	const generateQuiz = (continent) => {
 		facade.getQuiz(setQuiz, continent , username);

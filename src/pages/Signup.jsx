@@ -13,7 +13,7 @@ const Signup = () => {
 	};
 
 	const performSignup = (evt) => {
-		console.log(signupCredentials);
+		//console.log(signupCredentials);
 		facade.signup(signupCredentials.username, signupCredentials.password, signupCredentials.countryName, setResponseText);
 	};
 

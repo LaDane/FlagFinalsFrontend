@@ -14,7 +14,7 @@ const LoginBox = ({ loggedIn, onChange, performLogin }) => {
 	};
 
 	return (
-		<div className="login-box">
+		<div className="login-box app__body">
 			<div className="wrapper">
 				<header>Login</header>
 				<form onChange={onChange}>

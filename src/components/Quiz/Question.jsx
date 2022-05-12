@@ -12,6 +12,7 @@ const Question = ({ stage, question, answerBtn }) => {
 			<Navsidebar />
 
 			<QuestionContainer stage={stage} question={question} answerBtn={answerBtn} time={time} />
+			
 			<Timer answerBtn={answerBtn} setTime={setTime} />
 		</div>
 	);

@@ -3,7 +3,7 @@ import "./HomeScreen.css";
 
 const HomeScreen = () => {
 	return (
-		<div className="homescreen">
+		<div className="app__body">
 			<div className="homescreen-logo">
 				{/* <img className="homescreen-img" src={require("../../images/startcode-logo.png")} alt="Logo" /> */}
 			</div>
