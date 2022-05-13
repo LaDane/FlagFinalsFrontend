@@ -33,12 +33,12 @@ export const NavLink = styled(Link)`
 	padding: 10px 22px;
 
 	&.active {
-		color: #f2eacc;
+		color: black;
 	}
 
 	&:hover {
 		transition: all 0.2s ease-in-out;
-		background: #f2eacc;
+		background: #9EDB9B;
 		color: #010606;
 	}
 `;
@@ -106,7 +106,7 @@ export const NavBtnLink = styled(Link)`
 
 	&:hover {
 		transition: all 0.2s ease-in-out;
-		background: #f2eacc;
+		background: #9EDB9B;
 		color: #010606;
 	}
 `;

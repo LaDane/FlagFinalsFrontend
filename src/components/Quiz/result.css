@@ -1,26 +1,23 @@
 .correct {
 	color: green;
+	text-shadow: 1px 1px 2px black;
 }
 
 .wrong {
 	color: rgb(239, 79, 79);
+	text-shadow: 1px 1px 2px black;
 }
 
 .result {
 	text-transform: uppercase;
 	font-style: italic;
 	padding: 20px;
-	min-height: calc(100vh - 80px);
-	/* border-radius: 30px; */
-	/* box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.8); */
-	/* background: white; */
 	font-size: 50px;
 	color: #9EDB9B;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-    background-color: #F2EACC;
-    padding-bottom: 330px;
+	text-shadow: 1px 1px 2px black;
 }
 
 .you-gained {

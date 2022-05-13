@@ -3,7 +3,7 @@ import "./result.css";
 
 const Result = ({ stage, points, totalPoints, answerCorrect, continueBtn }) => {
   return (
-    <div className="result center-items">
+    <div className="result center-items app__body">
       {answerCorrect ? (
         <div className="correct">
           <h1>Correct!</h1>

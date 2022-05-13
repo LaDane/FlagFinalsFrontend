@@ -8,7 +8,7 @@ const End = ({ quiz }) => {
 	// }, []);
 
 	return (
-		<>
+		<div className="app__body">
 			{(() => {
 				if (quiz.totalPoints !== 0) {
 					return (
@@ -30,7 +30,7 @@ const End = ({ quiz }) => {
 					);
 				}
 			})()}
-		</>
+		</div>
 	);
 };
 

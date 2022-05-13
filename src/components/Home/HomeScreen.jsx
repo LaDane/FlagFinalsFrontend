@@ -10,6 +10,7 @@ const HomeScreen = () => {
 			<div className="homescreen-title">
 				<h1>flag finals!</h1>
 			</div>
+			<img className="flag-line" src={require("../../images/line_of_flags.png")}/>
 		</div>
 	);
 };

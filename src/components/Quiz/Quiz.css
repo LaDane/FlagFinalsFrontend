@@ -1,9 +1,3 @@
-.background {
-	background: #F2EACC;
-	min-height: calc(100vh - 80px);
-	
-}
-
 .center-items {
 	position: relative;
 	justify-content: center;
@@ -50,4 +44,5 @@
 
 .game-mode {
 	margin-bottom: 20px;
+	text-shadow: 1px 1px 2px black;
 }

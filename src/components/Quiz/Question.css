@@ -1,11 +1,9 @@
-
 .question-container {
 	display: flex;
 	flex-direction: row;
-	background-color: #F2EACC;
-	min-height: calc(100vh - 80px);
-
+	
 }
+
 
 
 .answer-btn {
@@ -47,4 +45,5 @@
 .question-number {
 	margin-bottom: 20px;
 	color: #9EDB9B;
+	text-shadow: 1px 1px 2px black;
 }

@@ -9,7 +9,7 @@ const Admin = () => {
   }, [])
  
   return (
-    <div>
+    <div className="app__body">
       <h2>Data Received from server</h2>
       <h3>{dataFromServer}</h3>
     </div>

@@ -11,7 +11,9 @@
 
  .App {
   
-  background: #F2EACC;
+  /*background: #F2EACC;*/
+  background: rgb(240, 240, 240);
+  
 }
 
 
