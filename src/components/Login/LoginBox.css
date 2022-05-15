@@ -1,45 +1,42 @@
 .login-box {
-	width: 100%;
+	top: -100px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
-.wrapper {
+.login-wrapper {
 	width: 380px;
-	padding: 40px 30px 50px 30px;
-	background: #F2EACC;
-	border-radius: 5px;
+	padding: 20px 30px 5px 30px;
+	background: #ffffff;
+	border-radius: 10px;
 	text-align: center;
-	box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
-.wrapper header {
+.login-wrapper header {
 	font-style: italic;
 	text-transform: uppercase;
-	color: #9EDB9B;
-	font-size: 35px;
+	color: rgb(255, 213, 130);
+	font-size: 55px;
 	font-weight: 600;
-	text-shadow: 1px 1px 2px black;
+	text-shadow: 1px 1px 4px black;
 }
 
-.wrapper form {
-	margin: 40px 0;
+.login-wrapper form {
+	margin: 20px 0;
 }
 
 form .field {
-	width: 100%;
 	margin-bottom: 20px;
 }
 
 form .field .input-area {
 	height: 50px;
-	width: 100%;
 	position: relative;
 }
 
 form input {
-	width: 100%;
 	height: 100%;
 	outline: none;
 	padding: 0 45px;
@@ -66,40 +63,59 @@ form input {
 	transition: color 0.2s ease;
 }
 
-.wrapper a {
+.login-wrapper a {
 	color: #a50fe1;
 	text-decoration: none;
 }
 
-.wrapper a:hover {
+.login-wrapper a:hover {
 	text-decoration: underline;
 }
 
 .login-btn {
 	text-transform: uppercase;
 	outline: 0;
-	background-color: #2F8DFF;
-	/* background-image: linear-gradient(45deg,#dac350,#0e0553); */
+	background-color: rgb(255, 181, 33);
 	width: 322px;
 	border: 3;
-	border-color: #FFFFFF;
 	padding: 20px;
 	padding-top: 20px;
-	color: #FFFFFF;
 	font-size: 14px;
 	cursor: pointer;
 	display: block;
-	margin:0 auto;
+	margin: 0 auto;
 	border-radius: 6px;
 	font-style: italic;
+	transition: all 0.2s ease-in-out;
+	font-size: larger;
+	font-weight: bolder;
+	border: none;
+	box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);
 }
 
 .login-btn:hover {
-	transition: all 0.2s ease-in-out;
-	background: #9EDB9B;
+	background: rgb(255, 227, 135);
+	transform: scale(1.02);
 }
 
 .status-text {
 	position: relative;
 	top: 40px;
+}
+
+.login-signup-text {
+	padding-top: 25px;
+}
+
+.login-singup-btn {
+	padding-top: 20px;
+	text-decoration: underline;
+	color: #2f8dff;
+	font-size: large;
+	cursor: pointer;
+	transition: transform 0.25s ease-out;
+}
+
+.login-singup-btn:hover {
+	transform: scale(1.09);
 }

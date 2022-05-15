@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaEnvelope, FaLock } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import "./LoginBox.css";
 
 const LoginBox = ({ loggedIn, onChange, performLogin }) => {
@@ -13,9 +14,17 @@ const LoginBox = ({ loggedIn, onChange, performLogin }) => {
 		setPasswordInput("");
 	};
 
+	const onClickSignup = (evt) => {
+		evt.preventDefault();
+		navigate("/signup");
+	};
+
+	const navigate = useNavigate();
+
 	return (
-		<div className="login-box app__body">
-			<div className="wrapper">
+		// <div className="login-box app__body">
+		<div className="login-box">
+			<div className="login-wrapper">
 				<header>Login</header>
 				<form onChange={onChange}>
 					<div className="field email">
@@ -54,6 +63,10 @@ const LoginBox = ({ loggedIn, onChange, performLogin }) => {
 						Login
 					</button>
 					{/* <p className="status-text">{responseText}</p> */}
+					<p className="login-signup-text">Don't have an account?</p>
+					<button className="login-singup-btn rmv-border" onClick={onClickSignup}>
+						Signup here!
+					</button>
 				</form>
 			</div>
 		</div>

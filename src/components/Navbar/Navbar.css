@@ -2,19 +2,17 @@
 	height: 80px;
 }
 
-
 .w3-sidebar {
 	max-width: 12rem !important;
-	width: 100%;
+	/* width: 100%; */
 	min-height: calc(100vh - 80px);
-	background-color: #2F8DFF;
+	background-color: #2f8dff;
 	position: absolute;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	z-index: 1;
-	border-radius: 5px;	 
-	
+	border-radius: 5px;
 }
 
 .highscore {
@@ -49,5 +47,5 @@
 
 .quizzname {
 	color: white;
-	text-orientation:sideways;
+	text-orientation: sideways;
 }

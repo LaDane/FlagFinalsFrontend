@@ -20,6 +20,8 @@ const Signup = () => {
 	return (
 		<div>
 			<SignupBox onChange={onChange} performSignup={performSignup} responseText={responseText} />
+			<br />
+			<br />
 		</div>
 	);
 };

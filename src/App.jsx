@@ -13,6 +13,10 @@ import Signup from "./pages/Signup";
 import Admin from "./pages/Admin";
 import User from "./pages/User";
 import Quiz from "./pages/Quiz";
+import Navbar2 from "./components/Navbar/Navbar2";
+import Highscore from "./components/Highscore/Highscore";
+import Leaderboards from "./pages/Leaderboards";
+import Statistics from "./pages/Statistics";
 
 function App() {
 	const [loggedIn, setLoggedIn] = useState(false);
@@ -29,7 +33,9 @@ function App() {
 	return (
 		<div className="App">
 			<Router basename="/flagfinals">
-				<Navbar role={role} logout={logout} />
+				{/* <Navbar role={role} logout={logout} /> */}
+				<Navbar2 loggedIn={loggedIn} logout={logout} />
+				<Highscore />
 
 				<Routes>
 					<Route path="/" element={<Home />} />
@@ -39,6 +45,8 @@ function App() {
 					<Route path="/admin" element={<Admin />} />
 					<Route path="/user" element={<User />} />
 					<Route path="/quiz" element={<Quiz username={username} loggedIn={loggedIn} />} />
+					<Route path="/leaderboards" element={<Leaderboards />} />
+					<Route path="/statistics" element={<Statistics />} />
 				</Routes>
 			</Router>
 		</div>

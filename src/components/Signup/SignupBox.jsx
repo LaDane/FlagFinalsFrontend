@@ -33,8 +33,8 @@ const SignupBox = ({ onChange, performSignup, responseText }) => {
 	}
 
 	return (
-		<div className="signup-box app__body">
-			<div className="wrapper">
+		<div className="signup-box">
+			<div className="signup-wrapper">
 				<header>Signup</header>
 				<form onChange={onChange}>
 					<div className="field email">
