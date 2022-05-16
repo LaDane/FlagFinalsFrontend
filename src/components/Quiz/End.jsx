@@ -1,11 +1,15 @@
-import React from "react";
-import "./End.css"
+import React, { useEffect } from "react";
+import "./End.css";
 
-const End = ({ quiz }) => {
+const End = ({ quiz, updateHighscores }) => {
 	// useEffect(() => {
 	// 	console.log(quiz);
 	// 	facade.endQuiz(quiz, setQuiz);
 	// }, []);
+
+	useEffect(() => {
+		updateHighscores();
+	}, []);
 
 	return (
 		<div className="app__body">

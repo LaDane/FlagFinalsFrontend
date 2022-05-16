@@ -106,12 +106,48 @@ function apiFacade() {
             });
     };
 
-    const getHighscores = (setHighscores) => {
+    const getHighscores10 = (setHighscores) => {
         const options = makeOptions("GET", false);
-        return fetch(URL + "/api/leaderboard/highscore", options)
+        return fetch(URL + "/api/leaderboard/highscores10", options)
             .then(handleHttpErrors)
             .then((res) => {
                 setHighscores(res)
+            })
+    }
+
+    const getHighscores = (setHighscores) => {
+        const options = makeOptions("GET", false);
+        return fetch(URL + "/api/leaderboard/highscores10", options)
+            .then(handleHttpErrors)
+            .then((res) => {
+                setHighscores(res)
+            })
+    }
+
+    const getMostPoints = (setMostPoints) => {
+        const options = makeOptions("GET", false);
+        return fetch(URL + "/api/leaderboard/mostpoints", options)
+            .then(handleHttpErrors)
+            .then((res) => {
+                setMostPoints(res)
+            })
+    }
+
+    const getMostAnswered = (setMostAnswered) => {
+        const options = makeOptions("GET", false);
+        return fetch(URL + "/api/leaderboard/mostanswered", options)
+            .then(handleHttpErrors)
+            .then((res) => {
+                setMostAnswered(res)
+            })
+    }
+
+    const getMostIncorrect = (setMostIncorrect) => {
+        const options = makeOptions("GET", false);
+        return fetch(URL + "/api/leaderboard/mostincorrect", options)
+            .then(handleHttpErrors)
+            .then((res) => {
+                setMostIncorrect(res)
             })
     }
 
@@ -161,7 +197,11 @@ function apiFacade() {
         getResult,
         endQuiz,
         getAllCountries,
+        getHighscores10,
         getHighscores,
+        getMostPoints,
+        getMostAnswered,
+        getMostIncorrect,
     };
 }
 

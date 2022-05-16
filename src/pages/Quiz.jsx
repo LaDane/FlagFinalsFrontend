@@ -5,7 +5,7 @@ import Question from "../components/Quiz/Question";
 import Result from "../components/Quiz/Result";
 import End from "../components/Quiz/End";
 
-const Quiz = ({ username, loggedIn }) => {
+const Quiz = ({ username, loggedIn, setHighscores }) => {
 	const [stage, setStage] = useState(0);
 	const [showResult, setShowResult] = useState(false);
 	const [showEnd, setShowEnd] = useState(false);
@@ -33,14 +33,13 @@ const Quiz = ({ username, loggedIn }) => {
 
 	const questionAmount = 20;
 
-
 	const generateQuiz = (continent) => {
-		facade.getQuiz(setQuiz, continent , username);
+		facade.getQuiz(setQuiz, continent, username);
 	};
 
 	const answerBtn = (evt, answerChoice, time) => {
-		if(evt!=null){
-		evt.preventDefault();
+		if (evt != null) {
+			evt.preventDefault();
 		}
 		facade.getResult(setPoints, totalPoints, setTotalPoints, quiz.questions[stage - 1].correctCountryId, answerChoice, time, setShowResult, setAnswerCorrect, updateQuestion);
 	};
@@ -64,6 +63,10 @@ const Quiz = ({ username, loggedIn }) => {
 		setQuiz(updatedQuiz);
 	};
 
+	const updateHighscores = () => {
+		facade.getHighscores10(setHighscores);
+	};
+
 	return (
 		<>
 			{(() => {
@@ -75,7 +78,7 @@ const Quiz = ({ username, loggedIn }) => {
 					);
 				} else {
 					if (showEnd) {
-						return <End quiz={quiz} />;
+						return <End quiz={quiz} updateHighscores={updateHighscores} />;
 					} else if (stage === 0) {
 						return <Lobby setStage={setStage} generateQuiz={generateQuiz} />;
 					} else if (showResult) {

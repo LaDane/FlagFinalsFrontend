@@ -22,6 +22,16 @@ function App() {
 	const [loggedIn, setLoggedIn] = useState(false);
 	const [role, setRole] = useState("");
 	const [username, setUsername] = useState("");
+	const [highscores, setHighscores] = useState({
+		highscores: [
+			{
+				rank: 0,
+				username: "",
+				svg: "",
+				points: 0,
+			},
+		],
+	});
 
 	const logout = () => {
 		facade.logout();
@@ -35,7 +45,7 @@ function App() {
 			<Router basename="/flagfinals">
 				{/* <Navbar role={role} logout={logout} /> */}
 				<Navbar2 loggedIn={loggedIn} logout={logout} />
-				<Highscore />
+				<Highscore highscores={highscores} setHighscores={setHighscores} />
 
 				<Routes>
 					<Route path="/" element={<Home />} />
@@ -44,7 +54,7 @@ function App() {
 
 					<Route path="/admin" element={<Admin />} />
 					<Route path="/user" element={<User />} />
-					<Route path="/quiz" element={<Quiz username={username} loggedIn={loggedIn} />} />
+					<Route path="/quiz" element={<Quiz username={username} loggedIn={loggedIn} setHighscores={setHighscores} />} />
 					<Route path="/leaderboards" element={<Leaderboards />} />
 					<Route path="/statistics" element={<Statistics />} />
 				</Routes>

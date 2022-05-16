@@ -1,0 +1,62 @@
+.leaderboard-item {
+	position: relative;
+	width: 90%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding-left: 50px;
+	margin: 20px 0px 0px 0px;
+	left: 40px;
+	padding: 10px 0px 10px 0px;
+	background: rgba(255, 239, 208, 0.633);
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.leaderboard-item-rank {
+	position: relative;
+	left: -40px;
+}
+
+.leaderboard-item-img {
+	position: absolute;
+	left: 160px;
+}
+
+.leaderboard-item-username {
+	position: relative;
+	left: 30px;
+}
+
+.leaderboard-item-stat {
+	position: relative;
+}
+
+.leaderboard-titles {
+	display: flex;
+	padding-top: 20px;
+	text-shadow: 0.5px 0.5px 0.5px black;
+	font-weight: bolder;
+	font-size: 18px;
+}
+
+.leaderboard-title-rank {
+	position: relative;
+	left: 82px;
+}
+
+.leaderboard-title-img {
+	position: relative;
+	left: 15px;
+}
+
+.leaderboard-title-username {
+	position: relative;
+	left: 5px;
+}
+
+.leaderboard-title-stat {
+	position: relative;
+	left: 8px;
+}

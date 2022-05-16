@@ -3,20 +3,9 @@ import "./Highscore.css";
 import facade from "../../apiFacade";
 import HighscoreItem from "./HighscoreItem";
 
-const Highscore = () => {
-	const [highscores, setHighscores] = useState({
-		highscores: [
-			{
-				rank: 0,
-				username: "",
-				svg: "",
-				points: 0,
-			},
-		],
-	});
-
+const Highscore = ({ highscores, setHighscores }) => {
 	useEffect(() => {
-		facade.getHighscores(setHighscores);
+		facade.getHighscores10(setHighscores);
 	}, []);
 
 	return (
