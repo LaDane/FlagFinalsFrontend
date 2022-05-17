@@ -2,18 +2,6 @@ import React from "react";
 import "./LItem.css";
 
 const LItem = ({ item, stat }) => {
-	// const stat = () => {
-	// 	if (item.points !== null) {
-	// 		return item.points;
-	// 	} else if (item.answered !== null) {
-	// 		console.log("HERE");
-	// 		return item.answered;
-	// 	} else if (item.incorrect !== null) {
-	// 		return item.incorrect;
-	// 	} else {
-	// 		return "Unknown";
-	// 	}
-	// };
 	return (
 		<>
 			<div className="leaderboard-item">

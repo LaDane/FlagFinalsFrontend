@@ -1,0 +1,67 @@
+.stat-item {
+	position: relative;
+	height: 100px;
+	display: grid;
+	background: rgba(255, 239, 208, 0.633);
+	margin-bottom: 20px;
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 0.2fr 1fr;
+	grid-template-areas:
+		"img countryData answered correct incorrect"
+		"img countryData answeredData correctData incorrectData";
+
+	word-break: normal;
+}
+
+.stat-item-img {
+	grid-area: img;
+	position: relative;
+	left: 30px;
+}
+
+.stat-country-data {
+	grid-area: countryData;
+	position: relative;
+	font-weight: bolder;
+	top: 37px;
+}
+
+.stat-answered {
+	grid-area: answered;
+	padding: 10px 5px 5px 5px;
+	font-size: 12px;
+}
+
+.stat-answered-data {
+	grid-area: answeredData;
+	font-weight: bolder;
+}
+
+.stat-correct {
+	grid-area: correct;
+	padding: 10px 5px 5px 5px;
+	font-size: 12px;
+}
+
+.stat-correct-data {
+	grid-area: correctData;
+	font-weight: bolder;
+}
+
+.stat-incorrect {
+	grid-area: incorrect;
+	padding: 10px 5px 5px 5px;
+	font-size: 12px;
+}
+
+.stat-incorrect-data {
+	grid-area: incorrectData;
+	font-weight: bolder;
+}

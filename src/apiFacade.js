@@ -151,6 +151,15 @@ function apiFacade() {
             })
     }
 
+    const getContinentStats = (continent, setStats) => {
+        const options = makeOptions("GET", false);
+        return fetch(URL + `/api/statistics/${continent}`, options)
+            .then(handleHttpErrors)
+            .then((res) => {
+                setStats(res)
+            })
+    }
+
     const setToken = (token) => {
         localStorage.setItem("jwtToken", token);
     };
@@ -202,6 +211,7 @@ function apiFacade() {
         getMostPoints,
         getMostAnswered,
         getMostIncorrect,
+        getContinentStats,
     };
 }
 
