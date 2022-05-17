@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import facade from "../apiFacade";
-import Tabs from "../components/Leaderboards/Tabs";
+import LHighscores from "../components/Leaderboards/LHighscores";
+import LMostAnswered from "../components/Leaderboards/LMostAnswered";
+import LMostIncorrect from "../components/Leaderboards/LMostIncorrect";
+import LMostPoints from "../components/Leaderboards/LMostPoints";
+import Tabs from "../components/Tabs/Tabs";
 
 const Leaderboards = () => {
 	const [highscores, setHighscores] = useState({
@@ -51,9 +55,27 @@ const Leaderboards = () => {
 		facade.getMostIncorrect(setMostIncorrect);
 	}, []);
 
+	const tabButtons = {
+		tabs: [
+			{ state: 1, line1: "Quiz", line2: "Highscores" },
+			{ state: 2, line1: "Most Points", line2: "Earned" },
+			{ state: 3, line1: "Most Questions", line2: "Answered" },
+			{ state: 4, line1: "Most Questions", line2: "Incorrect" },
+		],
+	};
+
+	const tabContent = {
+		content: [
+			{ state: 1, comp: LHighscores, data: highscores },
+			{ state: 2, comp: LMostPoints, data: mostPoints },
+			{ state: 3, comp: LMostAnswered, data: mostAnswered },
+			{ state: 4, comp: LMostIncorrect, data: mostIncorrect },
+		],
+	};
+
 	return (
 		<>
-			<Tabs highscores={highscores} mostPoints={mostPoints} mostAnswered={mostAnswered} mostIncorrect={mostIncorrect} />
+			<Tabs tabButtons={tabButtons} tabContent={tabContent} />
 		</>
 	);
 };

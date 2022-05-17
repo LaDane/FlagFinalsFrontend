@@ -2,7 +2,7 @@ import React from "react";
 import LItem from "./LItem";
 import "./LItem.css";
 
-const LMostAnswered = ({ mostAnswered }) => {
+const LMostAnswered = ({ data }) => {
 	return (
 		<>
 			<div className="leaderboard-container">
@@ -14,7 +14,7 @@ const LMostAnswered = ({ mostAnswered }) => {
 						Answered
 					</p>
 				</div>
-				{mostAnswered.mostAnswered.map((item) => {
+				{data.mostAnswered.map((item) => {
 					return <LItem item={item} stat={item.answered} key={item.rank} />;
 				})}
 			</div>

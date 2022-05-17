@@ -2,7 +2,7 @@ import React from "react";
 import LItem from "./LItem";
 import "./LItem.css";
 
-const LHighscores = ({ highscores }) => {
+const LHighscores = ({ data }) => {
 	return (
 		<>
 			<div className="leaderboard-container">
@@ -12,7 +12,7 @@ const LHighscores = ({ highscores }) => {
 					<p className="leaderboard-title-username">Name</p>
 					<p className="leaderboard-title-stat">Points</p>
 				</div>
-				{highscores.highscores.map((item) => {
+				{data.highscores.map((item) => {
 					return <LItem item={item} stat={item.points} key={item.rank} />;
 				})}
 			</div>

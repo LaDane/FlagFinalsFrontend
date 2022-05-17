@@ -2,7 +2,7 @@ import React from "react";
 import LItem from "./LItem";
 import "./LItem.css";
 
-const LMostPoints = ({ mostPoints }) => {
+const LMostPoints = ({ data }) => {
 	return (
 		<>
 			<div className="leaderboard-container">
@@ -12,7 +12,7 @@ const LMostPoints = ({ mostPoints }) => {
 					<p className="leaderboard-title-username">Name</p>
 					<p className="leaderboard-title-stat">Points</p>
 				</div>
-				{mostPoints.mostPoints.map((item) => {
+				{data.mostPoints.map((item) => {
 					return <LItem item={item} stat={item.points} key={item.rank} />;
 				})}
 			</div>

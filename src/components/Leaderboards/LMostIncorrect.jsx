@@ -2,7 +2,7 @@ import React from "react";
 import LItem from "./LItem";
 import "./LItem.css";
 
-const LMostIncorrect = ({ mostIncorrect }) => {
+const LMostIncorrect = ({ data }) => {
 	return (
 		<>
 			<div className="leaderboard-container">
@@ -14,7 +14,7 @@ const LMostIncorrect = ({ mostIncorrect }) => {
 						Incorrect
 					</p>
 				</div>
-				{mostIncorrect.mostIncorrect.map((item) => {
+				{data.mostIncorrect.map((item) => {
 					return <LItem item={item} stat={item.incorrect} key={item.rank} />;
 				})}
 			</div>
