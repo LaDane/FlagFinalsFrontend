@@ -9,7 +9,7 @@ const Lobby = ({ setStage, generateQuiz }) => {
   };
 
   return (
-    <div className="app__body">
+   
       <div className="center-items">
         <h2 className="game-mode">Pick a game mode!</h2>
         <button
@@ -66,7 +66,7 @@ const Lobby = ({ setStage, generateQuiz }) => {
           World
         </button>
       </div>
-    </div>
+  
     // <p className="how-to-play">Rules and how to play / earn points</p>
   );
 };

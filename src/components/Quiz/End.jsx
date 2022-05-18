@@ -29,7 +29,7 @@ const End = ({ quiz, updateHighscores }) => {
 				} else {
 					return (
 						<div className="end">
-							<h2>Calculating...</h2>
+							<h1>Calculating...</h1>
 						</div>
 					);
 				}

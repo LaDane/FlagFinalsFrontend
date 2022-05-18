@@ -76,7 +76,7 @@ const Statistics = () => {
 	const tabButtons = {
 		tabs: [
 			{ state: 1, line1: "North", line2: "America" },
-			{ state: 2, line1: "Sourth", line2: "America" },
+			{ state: 2, line1: "S.America /", line2: "Oceania" },
 			{ state: 3, line1: "Africa", line2: "" },
 			{ state: 4, line1: "Asia", line2: "" },
 			{ state: 5, line1: "Europe", line2: "" },

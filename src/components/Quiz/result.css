@@ -13,11 +13,15 @@
 	font-style: italic;
 	padding: 20px;
 	font-size: 50px;
-	color: #9EDB9B;
+	
 	justify-content: center;
 	align-items: center;
 	text-align: center;
 	text-shadow: 1px 1px 2px black;
+}
+
+.result  h3 {
+	color: rgb(255, 181, 33);
 }
 
 .you-gained {
@@ -48,29 +52,31 @@
 	text-align: center;
 }
 
-.answer-btn {
+.result-answer-btn {
 	text-transform: uppercase;
 	outline: 0;
-	background-color: #2F8DFF;
+	background-color: rgb(255, 181, 33);
 	/* background-image: linear-gradient(45deg,#dac350,#0e0553); */
 	width: 300px;
 	border: 3;
-	border-color: #FFFFFF;
+	border-color: black;
 	padding: 20px;
 	padding-top: 20px;
-	color: #FFFFFF;
+	color: black;
 	font-size: 14px;
 	cursor: pointer;
 	display: block;
 	margin:0 auto;
 	border-radius: 6px;
 	font-style: italic;
+	font-size: medium;
+	font-weight: bold;
 
 
 }
 
-.answer-btn:hover {
+.result-answer-btn:hover {
 	transition: all 0.2s ease-in-out;
-	background: #9EDB9B;
-	color: #010606;
+	background: black;
+	color: white;
 }

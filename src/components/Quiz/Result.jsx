@@ -17,7 +17,7 @@ const Result = ({ stage, points, totalPoints, answerCorrect, continueBtn }) => {
       <h3 className="total-points">Total score: {totalPoints}</h3>
 
       <button
-        className="answer-btn"
+        className="result-answer-btn"
         onClick={(e) => {
           continueBtn(e);
         }}

@@ -15,11 +15,12 @@
 
 }
 
+/*
 .lobby-start-btn {
 	text-transform: uppercase;
 	outline: 0;
 	background-color: #2F8DFF;
-	/* background-image: linear-gradient(45deg,#dac350,#0e0553); */
+
 	width: 300px;
 	border: 3;
 	border-color: #FFFFFF;
@@ -32,8 +33,6 @@
 	margin:0 auto;
 	border-radius: 6px;
 	font-style: italic;
-
-
 }
 
 .lobby-start-btn:hover {
@@ -41,8 +40,41 @@
 	background: #9EDB9B;
 	color: #010606;
 }
+*/
+
+.lobby-start-btn {
+	text-transform: uppercase;
+	outline: 0;
+	background-color: rgb(255, 181, 33);
+	width: 350px;
+	border: 3;
+	border-color: black;
+	padding: 20px;
+	padding-top: 20px;
+	color: black;
+	font-size: 14px;
+	cursor: pointer;
+	display: block;
+	margin:1px auto;
+	border-radius: 6px;
+	font-style: italic;
+	font-size: medium;
+	font-weight: bold;
+
+
+}
+
+.lobby-start-btn:hover {
+	transition: all 0.2s ease-in-out;
+	background: black;
+	color: white;
+}
 
 .game-mode {
 	margin-bottom: 20px;
+	color: rgb(255, 181, 33);
+	font-size: 50px;
 	text-shadow: 1px 1px 2px black;
 }
+
+
