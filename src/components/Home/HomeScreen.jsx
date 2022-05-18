@@ -20,12 +20,12 @@ const HomeScreen = () => {
       <div className="info__body">
         <InfoBox
           title="Most wrong answers:"
-          info="Out of all 217 flags, <NAME> in <CONTINENT> is the least recognized flag. Only <NUMBER>% knew it. Would you have guessed it? "
+          info="Out of all 217 flags, Vanuatu in South America and Oceania is the least recognized flag. Only 13% knew it. Would you have guessed it? "
           svg="548"
         />
         <InfoBox
           title="Most correct answers:"
-          info="<NAME> in <CONTINENT> is the most recognized flag in the world (according to us). Astonishing <NUMBER>% knew it."
+          info="Denmark in Europe is the most recognized flag in the world (according to us). Astonishing 100% knew it."
           svg="208"
         />
       </div>
