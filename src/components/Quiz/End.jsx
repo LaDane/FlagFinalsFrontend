@@ -9,7 +9,7 @@ const End = ({ quiz, updateHighscores }) => {
 
 	useEffect(() => {
 		updateHighscores();
-	}, []);
+	});
 
 	return (
 		<div className="app__body">

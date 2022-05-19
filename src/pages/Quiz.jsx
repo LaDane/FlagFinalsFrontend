@@ -78,7 +78,7 @@ const Quiz = ({ username, loggedIn, setHighscores }) => {
 					);
 				} else {
 					if (showEnd) {
-						return <End quiz={quiz} updateHighscores={updateHighscores()} />;
+						return <End quiz={quiz} updateHighscores={updateHighscores} />;
 					} else if (stage === 0) {
 						return <Lobby setStage={setStage} generateQuiz={generateQuiz} />;
 					} else if (showResult) {
