@@ -5,7 +5,7 @@ import Question from "../components/Quiz/Question";
 import Result from "../components/Quiz/Result";
 import End from "../components/Quiz/End";
 
-const Quiz = ({ username, loggedIn, setHighscores }) => {
+const Quiz = ({ username, loggedIn }) => {
 	const [stage, setStage] = useState(0);
 	const [showResult, setShowResult] = useState(false);
 	const [showEnd, setShowEnd] = useState(false);
@@ -63,9 +63,9 @@ const Quiz = ({ username, loggedIn, setHighscores }) => {
 		setQuiz(updatedQuiz);
 	};
 
-	const updateHighscores = () => {
-		facade.getHighscores10(setHighscores);
-	};
+	// const updateHighscores = () => {
+	// 	facade.getHighscores10(setHighscores);
+	// };
 
 	return (
 		<>
@@ -78,7 +78,7 @@ const Quiz = ({ username, loggedIn, setHighscores }) => {
 					);
 				} else {
 					if (showEnd) {
-						return <End quiz={quiz} updateHighscores={updateHighscores} />;
+						return <End quiz={quiz} />;
 					} else if (stage === 0) {
 						return <Lobby setStage={setStage} generateQuiz={generateQuiz} />;
 					} else if (showResult) {

@@ -1,11 +1,7 @@
 import React, { useEffect } from "react";
 import "./End.css";
 
-const End = ({ quiz, updateHighscores }) => {
-	useEffect(() => {
-		updateHighscores();
-	});
-
+const End = ({ quiz }) => {
 	return (
 		<div className="app__body">
 			{(() => {

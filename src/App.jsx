@@ -33,6 +33,22 @@ function App() {
 		],
 	});
 
+	// useEffect(() => {
+	// 	// update highscores infinitely
+	// 	facade.getHighscores10(setHighscores);
+	// });
+
+	const MINUTE_MS = 10000;
+	useEffect(() => {
+		facade.getHighscores10(setHighscores);
+
+		const interval = setInterval(() => {
+			facade.getHighscores10(setHighscores);
+		}, MINUTE_MS);
+
+		return () => clearInterval(interval); // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
+	}, []);
+
 	const logout = () => {
 		facade.logout();
 		setLoggedIn(false);
@@ -45,7 +61,7 @@ function App() {
 			<Router basename="/flagfinals">
 				{/* <Navbar role={role} logout={logout} /> */}
 				<Navbar2 loggedIn={loggedIn} logout={logout} />
-				<Highscore highscores={highscores} setHighscores={setHighscores} />
+				<Highscore highscores={highscores} />
 
 				<Routes>
 					<Route path="/" element={<Home />} />
