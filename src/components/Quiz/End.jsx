@@ -2,11 +2,6 @@ import React, { useEffect } from "react";
 import "./End.css";
 
 const End = ({ quiz, updateHighscores }) => {
-	// useEffect(() => {
-	// 	console.log(quiz);
-	// 	facade.endQuiz(quiz, setQuiz);
-	// }, []);
-
 	useEffect(() => {
 		updateHighscores();
 	});

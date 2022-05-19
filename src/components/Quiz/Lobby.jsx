@@ -10,7 +10,7 @@ const Lobby = ({ setStage, generateQuiz }) => {
 
   return (
    
-      <div className="center-items">
+      <div className="lobby">
         <h2 className="game-mode">Pick a game mode!</h2>
         <button
           className="lobby-start-btn"
