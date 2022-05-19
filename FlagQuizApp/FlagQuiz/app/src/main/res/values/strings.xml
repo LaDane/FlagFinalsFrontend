@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Flag Quiz</string>
+    <string name="start">Start</string>
+    <string name="next">Next</string>
+    <string name="try_again">Try again.</string>
+    <string name="quiz_completed">Quiz Completed!</string>
+    <string name="result">Result:</string>
+</resources>
